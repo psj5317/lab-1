@@ -1,4 +1,5 @@
 import DataBase.LibDB;
+import myClass.*;
 import java.util.HashMap;
 /**
  * MyApp 클래스의 설명을 작성하세요.
@@ -9,7 +10,9 @@ import java.util.HashMap;
 public class MyApp
 {
     public static void main(String[] args){
-        
+        LibDB<User> userDB = new LibDB<User>();
+        LibDB<Book> bookDB = new LibDB<Book>();
+
     }
 
     /**
