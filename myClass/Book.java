@@ -6,7 +6,7 @@ package myClass;
  * @author (작성자 이름)
  * @version (버전 번호 또는 작성한 날짜)
  */
-public class Book
+public class Book extends DB_Element
 {
     // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private String author;
@@ -18,9 +18,13 @@ public class Book
     /**
      * Book 클래스의 객체 생성자
      */
-    public Book(String author, String bookID, String publisher, String title, int year)
+    public Book(String bookID, String title, String author, String publisher, int year)
     {
-
+        this.bookID = bookID;
+        this.title = title;
+        this.author = author;
+        this.publisher = publisher;
+        this.year = year;
     }
 
     /**
@@ -42,7 +46,7 @@ public class Book
      */
     public String toString()
     {
-        
+        return " ";
     }
 
 }
