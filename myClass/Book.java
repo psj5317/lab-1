@@ -2,6 +2,7 @@ package myClass;
 
 /**
  * Book 클래스의 설명을 작성하세요.
+ *
  * 
  * @author (작성자 이름)
  * @version (버전 번호 또는 작성한 날짜)
@@ -43,9 +44,7 @@ public class Book
      * @param  y  메소드의 샘플 파라미터
      * @return    x 와 y의 합
      */
-    public String toString()
-    {
-       
+    public String toString(){ 
+        
     }
-
-}
+}   
