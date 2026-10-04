@@ -42,7 +42,7 @@ public class LibDB<T>
     {
         for(int i = 0;i < db.size();i++){
             DB_Element item = (DB_Element) db.get(i);
-            if(item.equals(s)){
+            if(item.getID().equals(s)){
                 return db.get(i);
             }
         }

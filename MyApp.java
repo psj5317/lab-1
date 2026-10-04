@@ -1,6 +1,6 @@
 import DataBase.LibDB;
 import myClass.*;
-import java.util.HashMap;
+import java.util.*; 
 /**
  * MyApp 클래스의 설명을 작성하세요.
  *
@@ -26,12 +26,18 @@ public class MyApp
         bookDB.addElement(new Book("B03", "명품 자바프로그래밍", "황기태", "생능출판", 2025));
         bookDB.addElement(new Book("B04", "소프트웨어테스트", "profsHwang", "SMU", 2024));
         
-        System.out.println("\n----- 책 목록 출력 -----");
+        System.out.println("----- 책 목록 출력 -----");
         printDB(bookDB);
         
         loanDB.put(userDB.findElement("2025320001"), bookDB.findElement("B02"));
         loanDB.put(userDB.findElement("2024320002"), bookDB.findElement("B03"));
         loanDB.put(userDB.findElement("2023320003"), bookDB.findElement("B04"));
+        
+        System.out.println("----- 대출현황 -----");  
+        printLoanList(loanDB); 
+        System.out.println("------------------");
+        
+    
     }
 
     /**
@@ -52,8 +58,14 @@ public class MyApp
      * @return    x 와 y의 합
      */
     public static void printLoanList(HashMap<User,Book> loanDB)
-    {
-        
+    { 
+        Set<User> keySet = loanDB.keySet();  
+        for(User k: keySet){  
+             loanDB.get(k); 
+             System.out.println(k + " ===> " + loanDB.get(k));
+            
+        }  
+       
     }
 
 
