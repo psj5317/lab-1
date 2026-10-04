@@ -1,4 +1,5 @@
 package DataBase;
+import myClass.DB_Element;
 import java.util.ArrayList;
 
 /**
@@ -39,11 +40,19 @@ public class LibDB<T>
      */
     public T findElement(String s)
     {
-        return db.get(Integer.parseInt(s));
+        for(int i = 0;i < db.size();i++){
+            DB_Element item = (DB_Element) db.get(i);
+            if(item.equals(s)){
+                return db.get(i);
+            }
+        }
+        return null;
     }
     
-    public void printAllElemenet(){
-        
+    public void printAllElement(){
+        for(int i = 0;i < db.size();i++){
+            System.out.println(db.get(i));
+        }
     }
 
 }

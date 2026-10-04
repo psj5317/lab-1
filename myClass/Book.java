@@ -7,7 +7,7 @@ package myClass;
  * @author (작성자 이름)
  * @version (버전 번호 또는 작성한 날짜)
  */
-public class Book
+public class Book extends DB_Element
 {
     private String author; 
     private String bookID; 
@@ -45,6 +45,6 @@ public class Book
      * @return    x 와 y의 합
      */
     public String toString(){ 
-        
+        return "(" + bookID + ") " + title + ", " + author + ", " + publisher + ", " + year;
     }
 }   
