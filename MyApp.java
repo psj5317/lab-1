@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Book, User 클래스의 객체를 생성하고 대출 현황을 저장하고 출력하는 클래스
  *
- * @author (2023320029 정지후, )
+ * @author (2023320029 정지후, 2023320010 박성준, 2023320012 강성하)
  * @version (2026/09/30)
  */
 public class MyApp

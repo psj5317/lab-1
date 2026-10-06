@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * Book, User의 객체를 담기 위한 제네릭 클래스
  *
- * @author (2023320029 정지후,)
+ * @author (2023320029 정지후, 2023320010 박성준, 2023320012 강성하)
  * @version (2026/09/30)
  */
 public class LibDB<T>
