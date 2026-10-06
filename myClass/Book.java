@@ -27,7 +27,7 @@ public class Book extends DB_Element
         this.publisher = publisher;
         this.year = year;
     }
-    
+
     @Override
     /**
      * 객체의 bookID를 리턴하는 메소드
@@ -38,7 +38,7 @@ public class Book extends DB_Element
     public String getID(){
         return bookID;        
     }  
-    
+
     @Override
     /**
      * toString 메소드 오버라이딩

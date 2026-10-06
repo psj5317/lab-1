@@ -1,6 +1,5 @@
 package myClass;
 
-
 /**
  * Book, User클래스를 상위클래스로 가지는 추상 클래스
  *

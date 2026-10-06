@@ -19,8 +19,7 @@ public class User extends DB_Element
         this.stID = stID;
         this.name = name;
     }
-    
-    @Override
+
     /**
      * 객체의 stID를 String형으로 리턴하는 메소드
      *
@@ -31,8 +30,7 @@ public class User extends DB_Element
     {
         return String.valueOf(stID);
     }
-    
-    @Override
+
     /**
      * toString 메소드 오버라이딩
      *
@@ -43,6 +41,5 @@ public class User extends DB_Element
     {
         return "[" + stID + "] "  + name;
     }
-
 
 }

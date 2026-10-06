@@ -47,7 +47,7 @@ public class LibDB<T>
         }
         return null;
     }
-    
+
     /**
      * 컬렉션안에 들어있는 요소들을 전부 출력하는 메소드
      * 
