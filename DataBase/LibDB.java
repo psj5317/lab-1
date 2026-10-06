@@ -3,14 +3,13 @@ import myClass.DB_Element;
 import java.util.ArrayList;
 
 /**
- * LibDB 클래스의 설명을 작성하세요.
+ * Book, User의 객체를 담기 위한 제네릭 클래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2023320029 정지후,)
+ * @version (2026/09/30)
  */
 public class LibDB<T>
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private ArrayList<T> db;
 
     /**
@@ -22,10 +21,10 @@ public class LibDB<T>
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     * 컬렉션의 요소를 추가하는 메서드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @param  item  Book또는 User 클래스의 객체
+     * @return    없음
      */
     public void addElement(T item)
     {
@@ -33,22 +32,29 @@ public class LibDB<T>
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 객체의 ID가 매개변수 id와 같다면 그 id를 가지고 있는 객체를 리턴해주는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  id  찾을 객체의 id
+     * @return   getID()를 통한 객체의 ID와 매개변수 id가 같은 객체 리턴
      */
-    public T findElement(String s)
+    public T findElement(String id)
     {
         for(int i = 0;i < db.size();i++){
             DB_Element item = (DB_Element) db.get(i);
-            if(item.getID().equals(s)){
+            if(item.getID().equals(id)){
                 return db.get(i);
             }
         }
         return null;
     }
     
+    /**
+     * 컬렉션안에 들어있는 요소들을 전부 출력하는 메소드
+     * 
+     * @param 없음
+     * @return 없음
+     * 
+     */
     public void printAllElement(){
         for(int i = 0;i < db.size();i++){
             System.out.println(db.get(i));

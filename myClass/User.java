@@ -1,14 +1,13 @@
 package myClass;
 
 /**
- * User 클래스의 설명을 작성하세요.
+ * 이용자에 대한 정보를 담고있는 클래스
  *
  * @author (작성자 이름)
  * @version (버전 번호 또는 작성한 날짜)
  */
 public class User extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private String name;
     private Integer stID;
 
@@ -20,23 +19,25 @@ public class User extends DB_Element
         this.stID = stID;
         this.name = name;
     }
-
+    
+    @Override
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
+     * 객체의 stID를 String형으로 리턴하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @param  없음
+     * @return  객테의 stID를 리턴
      */
     public String getID()
     {
         return String.valueOf(stID);
     }
-
+    
+    @Override
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * toString 메소드 오버라이딩
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  없음
+     * @return   이용자 객체에 대한 정보 리턴
      */
     public String toString()
     {

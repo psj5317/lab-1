@@ -2,10 +2,10 @@ import DataBase.LibDB;
 import myClass.*;
 import java.util.*; 
 /**
- * MyApp 클래스의 설명을 작성하세요.
+ * Book, User 클래스의 객체를 생성하고 대출 현황을 저장하고 출력하는 클래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2023320029 정지후, )
+ * @version (2026/09/30)
  */
 public class MyApp
 {
@@ -26,25 +26,25 @@ public class MyApp
         bookDB.addElement(new Book("B03", "명품 자바프로그래밍", "황기태", "생능출판", 2025));
         bookDB.addElement(new Book("B04", "소프트웨어테스트", "profsHwang", "SMU", 2024));
         
-        System.out.println("----- 책 목록 출력 -----");
+        System.out.println("\n----- 책 목록 출력 -----");
         printDB(bookDB);
         
         loanDB.put(userDB.findElement("2025320001"), bookDB.findElement("B02"));
         loanDB.put(userDB.findElement("2024320002"), bookDB.findElement("B03"));
         loanDB.put(userDB.findElement("2023320003"), bookDB.findElement("B04"));
         
-        System.out.println("----- 대출현황 -----");  
+        System.out.println("\n----- 대출현황 -----");  
         printLoanList(loanDB); 
-        System.out.println("------------------");
+        System.out.println("-------------------");
         
     
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * LibDB<T>의 요소를 출력하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  db  Book또는 User 객체가 들어간 컬렉션
+     * @return    컬렉션에 들어있는 모든 요소 출력
      */
     public static <T extends DB_Element> void printDB(LibDB<T> db)
     {
@@ -52,10 +52,10 @@ public class MyApp
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     * 대출 현황을 출력하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param  loanDB 대출 현황을 담고있는 HashMap
+     * @return    없음
      */
     public static void printLoanList(HashMap<User,Book> loanDB)
     { 
